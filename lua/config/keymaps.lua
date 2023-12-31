@@ -7,5 +7,9 @@ vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { n
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 
 -- telescope args
-vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
-  { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>fg",
+  "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+  { noremap = true, silent = true, desc = "Live Grep Args" }
+)
